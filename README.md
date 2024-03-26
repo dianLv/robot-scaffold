@@ -1,2 +1,2 @@
 # robot-scaffold
-A scaffold based on Netty for a network robot, used for interface testing, simulating user behavior, and performing stress testing.
+A scaffold based on Netty for a network robot. It can be used in game testing for interface testing, simulating player behavior, and conducting stress tests.

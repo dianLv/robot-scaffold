@@ -1,4 +1,4 @@
-package code.dianlv.example.server;
+package code.dianlv.example.origin.server;
 
 import code.dianlv.robot.connection.codec.Codec;
 import code.dianlv.robot.connection.codec.SimpleCodec;

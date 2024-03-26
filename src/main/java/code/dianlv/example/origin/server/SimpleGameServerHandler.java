@@ -1,4 +1,4 @@
-package code.dianlv.example.server;
+package code.dianlv.example.origin.server;
 
 import code.dianlv.robot.connection.Message;
 import code.dianlv.robot.utils.TimeUtils;
@@ -55,11 +55,11 @@ public class SimpleGameServerHandler extends SimpleChannelInboundHandler<Message
     private void onTalk(ChannelHandlerContext ctx, Message msg)
     {
         byte[] payload = msg.getPayload();
-        if (payload == null)
+        if (payload == null || payload.length == 0)
         {
             Message newMessage = new Message();
             newMessage.setId(2001);
-            newMessage.setPayload("Error, Not Content!!!".getBytes());
+            newMessage.setPayload("Error, Not Content!".getBytes());
             ctx.channel().writeAndFlush(newMessage);
         }
         else

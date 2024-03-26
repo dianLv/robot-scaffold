@@ -1,6 +1,5 @@
-package code.dianlv.example.client;
+package code.dianlv.example.origin.client;
 
-import code.dianlv.robot.connection.Connection;
 import code.dianlv.robot.connection.Message;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

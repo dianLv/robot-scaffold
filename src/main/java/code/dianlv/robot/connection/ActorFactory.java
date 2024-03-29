@@ -16,7 +16,7 @@ public interface ActorFactory
     Actor createActor(String targetIp, int targetPort, int timeout) throws ChannelCreateException;
     
     /**
-     * a batch actors
+     *  a batch of actors
      */
     List<Actor> createActors(String targetIp, int targetPort, int amount);
 }

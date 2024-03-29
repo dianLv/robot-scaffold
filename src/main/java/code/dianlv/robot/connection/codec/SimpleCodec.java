@@ -3,21 +3,24 @@ package code.dianlv.robot.connection.codec;
 import code.dianlv.robot.connection.Message;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.MessageToByteEncoder;
 
 /**
- * a simple codec, <br>
- * send ByteBuf(message_length, message_id, message_body(payload))<br>
+ * a simple codec is used for encoding and decoding network data.<br>
+ * The data structure for network transmission. <br>
+ * | length | message_header | message_body |<br>
+ * | 4      | id+...         | protocal bytes  |<br>
+ * | 4 + message_header.length + protocal bytes.length | / | / |
  */
 public class SimpleCodec implements Codec
 {
+    // Based on convention
     private static final int MESSAGE_MAX_LENGTH = 65535;
     private static final int LENGTH_FIELD_OFFSET = 0;
     private static final int MESSAGE_LENGTH_FIELD_LENGTH = 4;
     /**
-     * message_len:int id:int
+     * message_len:int + message_header(message_id:int, ...)
      */
     private static final int DEFAULT_MESSAGE_LENGTH = 8;
     

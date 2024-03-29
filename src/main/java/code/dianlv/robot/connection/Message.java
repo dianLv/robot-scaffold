@@ -1,7 +1,11 @@
 package code.dianlv.robot.connection;
 
 /**
- * a (Message|Packet|Telegram) object
+ * This object is used to represent a Message|Packet|Telegram.<br>
+ * A message typically consists of a header and a body.<br>
+ *  Header(include message_id, messsage_version, user_info, gateway_id etc.)<br>
+ *  Body, The bytes obtained from protocol conversion.<br>
+ * @see ./codec/SimpleCodec.java
  */
 public class Message
 {

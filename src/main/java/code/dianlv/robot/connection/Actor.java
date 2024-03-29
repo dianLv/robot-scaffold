@@ -1,6 +1,5 @@
 package code.dianlv.robot.connection;
 
-import code.dianlv.robot.client.CommonHandler;
 import code.dianlv.robot.protocol.Protocol;
 import io.netty.channel.Channel;
 

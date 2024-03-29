@@ -10,7 +10,6 @@ import code.dianlv.robot.connection.handler.SimpleHeartbeatHandler;
 import code.dianlv.robot.connection.handler.SimpleMessageHandler;
 
 import java.util.List;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -40,9 +39,9 @@ public class SimpleAllExample1
             {
                 // 1. actor.login();
                 // 2. ...
-                
-                // x.1. set sync points
-                // x.2. all actor send request
+                // or   
+                // 1. set sync points
+                // 2. all actor send request
             });
         }
     }
